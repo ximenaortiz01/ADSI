@@ -1,0 +1,424 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #303030;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.home-wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/background.jpg') center top;
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  /* el header se mantiene encima del contenido */
+  left: 0;
+  background: rgba(48, 48, 48, 1);
+  padding: 10px 0px;
+  width: 100%;
+  /* Se pueda ampliar horizontalemente */
+  height: 80px;
+  justify-content: center;
+  color: white;
+  right: auto;
+  z-index: 10;
+}
+
+header .container {
+  display: flex;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+  margin-left: 400px;
+}
+
+header nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-top: 5px;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
+.icono {
+  display: none;
+}
+
+header nav a:hover {
+  color: rgba(8, 184, 253, 0.918);
+}
+
+header nav a.active {
+  background: #fed136;
+}
+
+#ctn-icon-search {
+  top: 0;
+  right: 0px;
+  background: #fed136;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#ctn-icon-search:hover {
+  transform: scale(1.2);
+  background-color: turquoise;
+  color: #fed136;
+  transition: all 1s ease;
+}
+
+#ctn-bars-search {
+  position: fixed;
+  top: -10px;
+  width: 100%;
+  color: rgb(3, 3, 3);
+  padding: 20px;
+  z-index: 9;
+  transition: all 700ms;
+}
+
+#ctn-bars-search input {
+  display: block;
+  width: 1200px;
+  margin: auto;
+  padding: 10px;
+  font-size: 18px;
+  outline: 0;
+}
+
+#box-search {
+  position: fixed;
+  top: 165px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1200px;
+  background: #fff;
+  z-index: 8;
+  display: none;
+}
+
+#box-search li a {
+  display: block;
+  width: 1200px;
+  color: #777777;
+  padding: 12px 10px;
+}
+
+#box-search li a:hover {
+  background: #f3f3f3;
+}
+
+#box-search li a i {
+  margin-right: 5px;
+  color: #777777;
+}
+
+#cover-ctn-search {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  background: rgba(10, 110, 15, 0.3);
+  z-index: 7;
+  display: none;
+}
+
+#home {
+  color: white;
+  text-align: center;
+  padding: 200px 0 150px;
+}
+
+#home h1 {
+  font-size: 68px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+#home p {
+  margin: 0 20px;
+  color: whitesmoke;
+  font-size: 24px;
+  padding: 40px 20px 0;
+}
+
+#home .social {
+  margin-top: 80px;
+}
+
+#home .social a {
+  display: inline-block;
+  color: white;
+  border-radius: 50%;
+  background-color: #222;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+
+#home .social a:hover, #home .social a:focus, #home .social a:active {
+  background-color: #fed136;
+}
+
+/* .buscar {
+  position: absolute;
+  padding: 15px;
+  top: 10%;
+  left: 75%;
+}
+
+.buscar input {
+  width: 0px;
+  height: 28px;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 18px;
+  border-radius: 30px;
+  color: rgb(26, 25, 24);
+  border: 5px solid #fed136;
+  transition: all 1s ease;
+}
+
+.btn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background: #fed136;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.buscar:hover input {
+  width: 200px;
+}
+
+.buscar input:focus {
+  width: 400px;
+} */
+
+section {
+  clear: both;
+  padding: 80px 0;
+}
+
+section h2 {
+  color: #343A45;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+#servicios .box {
+  display: inline-block;
+  text-align: center;
+  width: 300px;
+  padding: 10px;
+}
+
+#servicios h3 {
+  color: #343A45;
+  font-size: 21px;
+}
+
+#video {
+  background-color: black;
+  text-align: center;
+  padding: 30px 0;
+}
+
+#portafolio {
+  background: whitesmoke;
+}
+
+#portafolio .box {
+  display: inline-block;
+  background: white;
+  text-align: center;
+  width: 296px;
+  margin: 15px;
+}
+
+#portafolio .box img {
+  width: 100%;
+}
+
+#portafolio .box h3 {
+  margin: 10px 0;
+}
+
+#portafolio .box p {
+  color: #666;
+  padding: 10px;
+  margin-top: 0;
+}
+
+#contacto {
+  background-color: #303030;
+  background-image: url('../images/map-image.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+#contacto h2 {
+  color: white;
+}
+
+#contacto input {
+  padding: 20px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#contacto textarea {
+  margin: 20px 0;
+  padding: 20px;
+  width: 400px;
+}
+
+#contacto button {
+  background: #fed136;
+  padding: 20px 40px;
+  border-color: #fed136;
+  border-radius: 3px;
+  color: white;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: bold;
+}
+
+/*Boton de ir arriba*/
+
+#button-up {
+  width: 60px;
+  height: 60px;
+  background: #fed136;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: all 300ms ease;
+  transform: scale(0);
+}
+
+#button-up:hover {
+  transform: scale(1.9);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.logo-footer {
+  text-align: center;
+}
+
+.container {
+  width: 990px;
+  margin: 0 auto;
+}
+
+/* Resposive Design Adaptable  */
+
+@media screen and (max-width: 1100px) {
+  #ctn-bars-search, #ctn-bars-search input, #box-search {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  header nav {
+    display: contents;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #home, footer {
+    display: flex;
+  }
+  #servicios .box, #portafolio .box {
+    display: block;
+  }
+}
+
+@media screen and (max-width :570px) {
+  .icono {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    height: 50px;
+    color: #fed136;
+    margin-top: -5px;
+    width: 500px;
+    font-size: 50px;
+    cursor: pointer;
+    background: transparent;
+  }
+  header nav a {
+    color: aqua;
+  }
+  #ctn-icon-search {
+    position: fixed;
+  }
+  .enlaces {
+    position: fixed;
+    flex-direction: column;
+    height: 100px;
+    width: 120px;
+    right: 0;
+    transition: all 2s ease;
+    background: transparent;
+    transform: translateX(-100px);
+    transform: translateY(150px);
+    position: absolute;
+    left: 100px;
+    top: -135px;
+  }
+  .uno {
+    clip-path: circle(0% at 150%);
+  }
+  .dos {
+    clip-path: circle(150% at 0%);
+  }
+}
